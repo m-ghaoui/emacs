@@ -1,0 +1,7 @@
+/.emacs.d/elpa/*
+/.emacs.d/*.el
+*~
+/.emacs.d/projectile*
+/.emacs.d/history
+/.emacs.d/ido.last
+/.emacs.d/recentf
