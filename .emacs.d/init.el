@@ -65,6 +65,19 @@ There are two things you can do about this warning:
 ;; company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; Markdown mode
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; Clock (Org mode)
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+(setq org-clock-continuously t)
+
 ;; theme
 ;; (load-theme 'solarized-dark t)
 (require 'color-theme-sanityinc-tomorrow)
@@ -75,6 +88,7 @@ There are two things you can do about this warning:
 (savehist-mode 1)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
+
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq create-lockfiles nil) ; stop creating .#lock file links
