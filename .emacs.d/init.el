@@ -36,6 +36,14 @@ There are two things you can do about this warning:
 ;; editorconfig
 (editorconfig-mode 1)
 
+;; web-mode
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+
 ;; Basic settings
 
 (savehist-mode 1)
