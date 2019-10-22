@@ -25,7 +25,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
+    (solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -45,7 +45,6 @@ There are two things you can do about this warning:
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
 ;; flycheck
 (global-flycheck-mode)
@@ -58,6 +57,12 @@ There are two things you can do about this warning:
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; company-mode
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; solarized
+(load-theme 'solarized-dark t)
 
 ;; Basic settings
 
