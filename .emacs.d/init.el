@@ -32,3 +32,15 @@ There are two things you can do about this warning:
 
 ;; better-defaults
 (require 'better-defaults)
+
+;; editorconfig
+(editorconfig-mode 1)
+
+;; Basic settings
+
+(savehist-mode 1)
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+(setq create-lockfiles nil) ; stop creating .#lock file links
