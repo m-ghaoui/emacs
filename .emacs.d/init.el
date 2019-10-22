@@ -44,6 +44,9 @@ There are two things you can do about this warning:
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
+;; flycheck
+(global-flycheck-mode)
+
 ;; Basic settings
 
 (savehist-mode 1)
