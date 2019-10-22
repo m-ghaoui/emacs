@@ -22,10 +22,14 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(custom-safe-themes
+   (quote
+    ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
+    (color-theme-sanityinc-tomorrow solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,8 +65,10 @@ There are two things you can do about this warning:
 ;; company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; solarized
-(load-theme 'solarized-dark t)
+;; theme
+;; (load-theme 'solarized-dark t)
+(require 'color-theme-sanityinc-tomorrow)
+(color-theme-sanityinc-tomorrow--define-theme bright)
 
 ;; Basic settings
 
@@ -72,3 +78,6 @@ There are two things you can do about this warning:
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq create-lockfiles nil) ; stop creating .#lock file links
+
+;; Maximize
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
