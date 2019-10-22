@@ -25,7 +25,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (helm web-mode php-mode flycheck editorconfig better-defaults))))
+    (projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -53,6 +53,11 @@ There are two things you can do about this warning:
 ;; helm
 (require 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
+
+;; projectile
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Basic settings
 
