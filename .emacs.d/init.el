@@ -29,7 +29,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (smooth-scrolling color-theme-sanityinc-tomorrow solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
+    (js2-mode typescript-mode yasnippet csharp-mode helm-lsp company-lsp lsp-ui lsp-mode smooth-scrolling color-theme-sanityinc-tomorrow solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,7 +58,10 @@ There are two things you can do about this warning:
 
 ;; helm
 (require 'helm)
-(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
 
 ;; projectile
 (projectile-mode +1)
@@ -74,6 +77,28 @@ There are two things you can do about this warning:
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; js2 mode
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Better imenu
+(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+
+;; lsp-mode
+(require 'lsp-mode)
+(setq lsp-prefer-flymake nil)
+
+; (add-hook 'csharp-mode-hook #'lsp)
+(add-hook 'typescript-mode-hook #'lsp)
+
+(require 'lsp-ui)
+(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+; (add-hook 'csharp-mode-hook 'flycheck-mode)
+(add-hook 'typescript-mode-hook 'flycheck-mode)
+
+(require 'company-lsp)
+(push 'company-lsp company-backends)
 
 ;; Clock (Org mode)
 
@@ -95,6 +120,7 @@ There are two things you can do about this warning:
 
 ;; Basic settings
 
+(save-place-mode 1)
 (savehist-mode 1)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
