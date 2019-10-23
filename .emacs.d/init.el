@@ -29,7 +29,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-tomorrow solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
+    (smooth-scrolling color-theme-sanityinc-tomorrow solarized-theme company projectile helm web-mode php-mode flycheck editorconfig better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -88,6 +88,10 @@ There are two things you can do about this warning:
 
 ;; Menu bar
 (menu-bar-mode 1)
+
+;; Smooth scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
 
 ;; Basic settings
 
