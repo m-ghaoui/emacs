@@ -53,6 +53,9 @@ There are two things you can do about this warning:
 ;; flycheck
 (global-flycheck-mode)
 
+(if (string-equal system-type "windows-nt")
+  (setq flycheck-php-executable "c:/php-7.3.9-Win32-VC15-x64/php.exe"))
+
 ;; helm
 (require 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -82,6 +85,9 @@ There are two things you can do about this warning:
 ;; (load-theme 'solarized-dark t)
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow--define-theme bright)
+
+;; Menu bar
+(menu-bar-mode 1)
 
 ;; Basic settings
 
