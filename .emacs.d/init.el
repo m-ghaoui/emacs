@@ -91,11 +91,13 @@ There are two things you can do about this warning:
 
 ; (add-hook 'csharp-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
+(add-hook 'js2-mode-hook #'lsp)
 
 (require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 ; (add-hook 'csharp-mode-hook 'flycheck-mode)
 (add-hook 'typescript-mode-hook 'flycheck-mode)
+(add-hook 'js2-mode-hook 'flycheck-mode)
 
 (require 'company-lsp)
 (push 'company-lsp company-backends)
