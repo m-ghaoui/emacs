@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-ex-search-case (quote sensitive))
- '(org-clock-clocktable-default-properties (quote (:scope file :narrow 70 :maxlevel 2)))
+ '(org-clock-clocktable-default-properties (quote (:narrow 70 :maxlevel 2 :scope file)))
  '(package-selected-packages (quote (evil org))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
