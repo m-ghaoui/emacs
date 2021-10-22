@@ -21,3 +21,5 @@
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ;
 (setq create-lockfiles nil) ; stop creating .#lock file links
+
+(load-theme 'tango-dark t)
