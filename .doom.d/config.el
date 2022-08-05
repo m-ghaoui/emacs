@@ -8,9 +8,10 @@
 (org-clock-persistence-insinuate)
 (setq org-clock-continuously t)
 (setq org-clock-out-remove-zero-time-clocks nil)
-(setq ispell-program-name "C:/tools/hunspell-1.3.2-3-w32-bin/bin/hunspell.exe")
-(setq ispell-dictionary "nl_NL")
-(setq org-hide-leading-stars nil)
+
+(after! org
+  (setq org-hide-leading-stars nil
+        org-startup-indented nil))
 
 ;; (use-package! lsp-volar)
 
