@@ -7,12 +7,12 @@
 
 ;; Clock (Org mode)
 
-;; Put this in ~\AppData\Roaming\.doom.d\config.el and run 'doom sync'
 (setq org-clock-clocktable-default-properties (quote (:narrow 70 :maxlevel 2 :scope file)))
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-continuously t)
 (setq org-clock-out-remove-zero-time-clocks nil)
+(define-key org-mode-map (kbd "C-c C-x C-r") 'org-clock-report)
 
 ;; Basic settings
 
