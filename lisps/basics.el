@@ -2,7 +2,7 @@
 
 ;; Basic settings
 (setq inhibit-startup-screen t)
-(savehist-mode 1)
+;; (savehist-mode 1)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 (setq make-backup-files nil) ; stop creating backup~ files

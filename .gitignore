@@ -2,5 +2,9 @@ history
 org-clock-save.el
 recentf.eld
 eln-cache/
-recentf/
 org-persist/
+recentf
+auto-save-list
+elpa/
+projects.eld
+projects
