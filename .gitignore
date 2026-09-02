@@ -1,5 +1,6 @@
 history
 org-clock-save.el
 recentf.eld
-/eln-cache
-/recentf
+eln-cache/
+recentf/
+org-persist/
