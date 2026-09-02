@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; Basic settings
 (setq inhibit-startup-screen t)
 (savehist-mode 1)

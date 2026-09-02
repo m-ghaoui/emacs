@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; Clock (Org mode)
 (setq org-clock-clocktable-default-properties (quote (:narrow 70 :maxlevel 3 :scope file)))
 (setq org-clock-persist 'history)
