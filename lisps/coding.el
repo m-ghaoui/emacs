@@ -23,4 +23,9 @@
     :ensure t)
 
 (use-package rust-mode
-    :ensure t)
+  :init
+  (setq rust-mode-treesitter-derive t))
+
+(setq treesit-language-source-alist
+      '((rust "https://github.com/tree-sitter/tree-sitter-rust")))
+      
