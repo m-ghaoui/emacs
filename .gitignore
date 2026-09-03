@@ -10,3 +10,5 @@ projects.eld
 projects
 .cache/treemacs-persist
 transient/history.el
+/custom-vars.el
+/tree-sitter
