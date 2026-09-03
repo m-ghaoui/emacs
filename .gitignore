@@ -8,3 +8,5 @@ auto-save-list
 elpa/
 projects.eld
 projects
+.cache/treemacs-persist
+transient/history.el

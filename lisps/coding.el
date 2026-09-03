@@ -17,3 +17,7 @@
     :ensure t
     :config
     (global-company-mode 1))
+
+(use-package magit
+    :ensure t)
+
