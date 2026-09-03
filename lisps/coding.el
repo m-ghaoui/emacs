@@ -22,6 +22,8 @@
 (use-package magit
     :ensure t)
 
+;; rustup component add rust-analyzer
+;; M-x treesit-install-language-grammar RET rust RET
 (use-package rust-mode
   :ensure t
   :init
