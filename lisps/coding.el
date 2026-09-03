@@ -7,6 +7,7 @@
 
 ;; Python
 (add-hook 'python-mode-hook 'eglot-ensure)
+(add-hook 'rust-mode-hook 'eglot-ensure)
 
 ;; Don't bother with dotnet: https://lists.gnu.org/archive/html/bug-gnu-emacs/2026-07/msg00783.html
 
@@ -21,3 +22,5 @@
 (use-package magit
     :ensure t)
 
+(use-package rust-mode
+    :ensure t)

@@ -70,6 +70,7 @@
     ;;(treemacs-resize-icons 44)
 
     (treemacs-follow-mode t)
+    (treemacs-project-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
     (when treemacs-python-executable
