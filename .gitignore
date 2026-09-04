@@ -12,3 +12,5 @@ projects
 transient/history.el
 /custom-vars.el
 /tree-sitter
+/dape-breakpoints
+/tramp
