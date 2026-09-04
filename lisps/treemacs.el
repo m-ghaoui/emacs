@@ -120,4 +120,4 @@
 ;;   :ensure t
 ;;   :config (treemacs-set-scope-type 'Tabs))
 
-(treemacs-start-on-boot)
+;; (treemacs-start-on-boot)
