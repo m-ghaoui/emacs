@@ -7,3 +7,5 @@
 (load "~/.emacs.d/lisps/vertico")
 (load "~/.emacs.d/lisps/treemacs")
 (load "~/.emacs.d/lisps/dape")
+(load "~/.emacs.d/lisps/markdown")
+
