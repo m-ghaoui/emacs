@@ -38,6 +38,19 @@
 (when (fboundp 'tool-bar-mode) ; When in a GUI, disable tool bar;
   (tool-bar-mode -1))          ; all these tools are in the menu-bar anyway
 
+;; These settings apply to *all* frames.
+(setq default-frame-alist '(
+                            ;; You can turn off scroll bars by uncommenting these lines:
+                            ;; (vertical-scroll-bars . nil)
+                            ;; (horizontal-scroll-bars . nil)
+                            (ns-appearance . dark)
+                            (ns-transparent-titlebar . t)
+
+                            ;; Use this to turn off the OS window decoration
+                            ;; (undecorated-round . t)
+                            ;; (internal-border-width . 3)
+                            ))
+
 ;; These settings apply to the first frame created. The
 ;; (back|fore)ground-color settings need to live here so that a
 ;; theme's background color applies correctly to subsequent frames.
