@@ -37,3 +37,9 @@
 
 (when (fboundp 'tool-bar-mode) ; When in a GUI, disable tool bar;
   (tool-bar-mode -1))          ; all these tools are in the menu-bar anyway
+
+;; These settings apply to the first frame created. The
+;; (back|fore)ground-color settings need to live here so that a
+;; theme's background color applies correctly to subsequent frames.
+(setq initial-frame-alist '((fullscreen . maximized)
+                            ))
